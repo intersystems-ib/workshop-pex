@@ -1,0 +1,18 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "java/lib/gson-2.8.5.jar",
+        "java/lib/intersystems-gateway-3.1.0.jar",
+        "java/lib/intersystems-jdbc-3.1.0.jar",
+        "java/lib/intersystems-utils-3.1.0.jar"
+    ],
+    "objectscript.export.folder": "iris/src",
+    "objectscript.conn": {
+        "active": true,
+        "username": "superuser",
+        "password": "SYS",
+        "ns": "USER",
+        "port": 52773,
+        "host": "localhost"
+    },
+}
