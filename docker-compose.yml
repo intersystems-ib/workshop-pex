@@ -4,12 +4,14 @@ services:
     build:
       context: java
       dockerfile: Dockerfile
+    container_name: jgw
     restart: always
     ports: 
       - 55555:55555
 
   iris:
     init: true
+    container_name: iris
     build:
       context: iris
       dockerfile: Dockerfile
