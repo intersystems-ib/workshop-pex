@@ -1,38 +1,40 @@
 package workshop.pex;
 
 import com.intersystems.enslib.pex.*;
-import com.intersystems.jdbc.IRISObject;
-import com.intersystems.jdbc.IRIS;
-import com.intersystems.gateway.GatewayContext;
 
-import java.util.Properties;
-
+/**
+ * Simple Business Operation implemented in Java.
+ * Request: FirstMessage 
+ * Response: FirstMessage containing the original value in uppercase 
+ */
 public class FirstOperation extends BusinessOperation {
-    // Connection to InterSystems IRIS
-    private IRIS iris;
-
-    // Name of our Producer
+    
+    /** Sample property that can be set from IRIS Management Portal */
     public String CLIENTID;
 
+    /** 
+     * OnInit: initilize Business Operation 
+     */
     public void OnInit() throws Exception {
-
         LOGINFO("FirstOperation:OnInit()");
-        
-        iris = GatewayContext.getIRIS();
-        LOGINFO(String.format("CLIENTID: %s", CLIENTID));
-        
+        LOGINFO(String.format("CLIENTID: %s", CLIENTID));    
         return;
     }
 
+    /**
+     * OnTearDown: actions you want to do when stopping the Business Operation
+     */
     public void OnTearDown() throws Exception {
         LOGINFO("FirstOperation:OnTearDown()");
         return;
     }
 
+    /**
+     * OnMessage: handle incoming request messages
+     */
     public Object OnMessage(Object request) throws Exception {
         FirstMessage response = new FirstMessage();
-        response.value = ((FirstMessage)request).value.toUpperCase();
-
+        response.value = ((FirstMessage) request).value.toUpperCase();
         return response;
     }
 }
