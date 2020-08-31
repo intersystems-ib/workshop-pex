@@ -12,7 +12,7 @@ New to IRIS Interoperability framework? Have a look at [IRIS Interoperability In
 * [Visual Studio Code](https://code.visualstudio.com/download) + [InterSystems ObjectScript VSCode Extension](https://marketplace.visualstudio.com/items?itemName=daimor.vscode-objectscript)
 
 # Setup
-Build the image and run the container we will use during the workshop:
+Build the image we will use during the workshop:
 
 ```console
 $ git clone https://github.com/intersystems-ib/workshop-pex
