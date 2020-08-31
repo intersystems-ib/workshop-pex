@@ -1,5 +1,6 @@
 version: "2.2"
 services:
+  # java gateway
   jgw:
     build:
       context: java
@@ -9,6 +10,7 @@ services:
     ports: 
       - 55555:55555
 
+  # iris
   iris:
     init: true
     container_name: iris

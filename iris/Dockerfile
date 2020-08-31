@@ -18,7 +18,8 @@ RUN \
   # start production
   set production = "Workshop.PEX.FirstDemo.Production" \
   set ^Ens.Configuration("csp","LastProduction") = production \
-  do ##class(Ens.Director).SetAutoStart(production)
+  do ##class(Ens.Director).SetAutoStart(production) \
+  set sc = 1
 
 # bringing the standard shell back
 SHELL ["/bin/bash", "-c"]

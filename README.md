@@ -3,13 +3,13 @@ This repository contains the materials and some examples you can use to learn th
 
 You can find more in-depth information in https://learning.intersystems.com.
 
+New to IRIS Interoperability framework? Have a look at [IRIS Interoperability Intro Workshop](https://github.com/intersystems-ib/workshop-interop-intro).
+
 # What do you need to install? 
 * [Git](https://git-scm.com/downloads) 
 * [Docker](https://www.docker.com/products/docker-desktop) (if you are using Windows, make sure you set your Docker installation to use "Linux containers").
 * [Docker Compose](https://docs.docker.com/compose/install/)
 * [Visual Studio Code](https://code.visualstudio.com/download) + [InterSystems ObjectScript VSCode Extension](https://marketplace.visualstudio.com/items?itemName=daimor.vscode-objectscript)
-
-New to IRIS Interoperability framework? Have a look at [IRIS Interoperability Intro Workshop](https://github.com/intersystems-ib/workshop-interop-intro).
 
 # Setup
 Build the image and run the container we will use during the workshop:
