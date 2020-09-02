@@ -60,7 +60,7 @@ docker-compose up -d
 * Notice that Java Gateway Server will run on a separate container (this is based on https://github.com/intersystems-community/JavaGatewayImage project).
 * Inspect [docker-compose.yml](docker-compose.yml) and notice the two containers we are using. What is the hostname for the Java Gateway Server we are using?
 
-<img src="img/worshop-pex-diagram.png">
+<img src="img/worshop-pex-diagram.png" width="600px">
 
 ## (d). Adding a Business Service and Business Process
 * In VS Code, open [java/src/workshop/pex/FirstService.java](java/src/workshop/pex/FirstService.java) and [java/src/workshop/pex/FirstProcess.java](java/src/workshop/pex/FirstProcess.java).
