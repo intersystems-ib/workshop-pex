@@ -35,7 +35,7 @@ docker cp iris:/usr/irissys/dev/java/lib/gson/gson-2.8.5.jar java/lib
 ## (a). FirstDemo interoperability Production
 * Run the containers we will use in the workshop:
 ```
-docker-compose up -d
+docker-compose up
 ```
 * Open the [Management Portal](http://localhost:52773/csp/sys/UtilHome.csp).
 * Login using the default `superuser`/ `SYS` account.
