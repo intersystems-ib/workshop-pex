@@ -65,6 +65,11 @@ docker cp iris:/usr/irissys/dev/java/lib/gson/gson-2.8.5.jar java/lib
 * Can you find them in the running interoperability production?
 * Try to understand what are doing `FirstService` and `FirstProcess`. Go through their implementation and *Settings* tab in the production, and finally enable them and check what happens.
 
+## (e). Make some changes
+* Make some changes on [FirstService.java](java/src/workshop/pex/FirstService.java), [FirstProcess.java](java/src/workshop/pex/FirstProcess.java) or [FirstOperation.java](java/src/workshop/pex/FirstOperation.java) (e.g. add some extra `LOGINFO`).
+* Re-compile using `docker-compose build` and run again.
+* Test your changes.
+
 # Explore more complex scenarios
 Have a look at those great examples on using PEX with InterSystems IRIS:
 * https://github.com/intersystems-community/pex-demo
