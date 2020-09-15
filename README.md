@@ -72,7 +72,7 @@ docker cp iris:/usr/irissys/dev/java/lib/gson/gson-2.8.5.jar java/lib
 
 # Explore more complex scenarios
 Have a look at those great examples on using PEX with InterSystems IRIS:
-* https://github.com/intersystems-community/pex-demo
+* https://github.com/albertoft/pex-demo
 * https://github.com/intersystems-community/irisdemo-demo-kafka
 
 
