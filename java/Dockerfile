@@ -9,7 +9,7 @@ ARG APP_HOME=/tmp/app
 COPY src $APP_HOME/src
 
 # copy iris pex libraries to $APP_HOME/jgw
-COPY --from=intersystemscommunity/jgw:latest /jgw/*.jar $APP_HOME/jgw/
+COPY --from=intersystemsdc/jgw:latest /jgw/*.jar $APP_HOME/jgw/
 
 # create $APP_HOME/jar
 WORKDIR $APP_HOME/jar/
@@ -22,7 +22,7 @@ RUN javac -classpath $APP_HOME/jar/*:$APP_HOME/jgw/* workshop/pex/*.java && \
 
 ###
 ### jgw: java gateway server
-FROM intersystemscommunity/jgw:latest
+FROM intersystemsdc/jgw:latest
 
 # copy jars built in builder image into java gateway server 
 COPY --from=builder /tmp/app/jar/*.jar $GWDIR/
