@@ -1,4 +1,5 @@
-FROM store/intersystems/iris-community:2020.2.0.211.0
+#FROM store/intersystems/iris-community:2020.2.0.211.0
+FROM store/intersystems/iris-community:2021.1.0.205.0
 
 USER ${ISC_PACKAGE_MGRUSER}
 

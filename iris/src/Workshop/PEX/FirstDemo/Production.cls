@@ -8,7 +8,7 @@ XData ProductionDefinition
   <ActorPoolSize>2</ActorPoolSize>
   <Setting Target="Adapter" Name="ShutdownTimeout">20</Setting>
   <Item Name="FirstOperation" Category="" ClassName="EnsLib.PEX.BusinessOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="true" Schedule="">
-    <Setting Target="Host" Name="%gatewayPort">55555</Setting>
+    <Setting Target="Host" Name="%gatewayPort">44444</Setting>
     <Setting Target="Host" Name="%gatewayHost">jgw</Setting>
     <Setting Target="Host" Name="%remoteClassname">workshop.pex.FirstOperation</Setting>
     <Setting Target="Host" Name="%remoteSettings">CLIENTID=4</Setting>
@@ -18,13 +18,13 @@ XData ProductionDefinition
     <Setting Target="Host" Name="ResponseFrom">FirstOperation</Setting>
   </Item>
   <Item Name="FirstService" Category="" ClassName="EnsLib.PEX.BusinessService" PoolSize="1" Enabled="false" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
-    <Setting Target="Host" Name="%gatewayPort">55555</Setting>
+    <Setting Target="Host" Name="%gatewayPort">44444</Setting>
     <Setting Target="Host" Name="%gatewayHost">jgw</Setting>
     <Setting Target="Host" Name="%remoteClassname">workshop.pex.FirstService</Setting>
     <Setting Target="Host" Name="%remoteSettings">TargetConfigName=FirstProcess</Setting>
   </Item>
   <Item Name="FirstProcess" Category="" ClassName="EnsLib.PEX.BusinessProcess" PoolSize="1" Enabled="false" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
-    <Setting Target="Host" Name="%gatewayPort">55555</Setting>
+    <Setting Target="Host" Name="%gatewayPort">44444</Setting>
     <Setting Target="Host" Name="%gatewayHost">jgw</Setting>
     <Setting Target="Host" Name="%remoteClassname">workshop.pex.FirstProcess</Setting>
     <Setting Target="Host" Name="%remoteSettings">Timeout=PT20S

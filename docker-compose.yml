@@ -8,7 +8,9 @@ services:
     container_name: jgw
     restart: always
     ports: 
-      - 55555:55555
+      - 44444:44444
+    environment:
+      - PORT=44444
 
   # iris
   iris:
