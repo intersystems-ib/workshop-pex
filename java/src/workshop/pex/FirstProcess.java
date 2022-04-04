@@ -60,4 +60,10 @@ public class FirstProcess extends BusinessProcess {
         return response;
     }
 
+    /**
+     * OnTearDown: actions you want to do when stopping the Business Operation
+     */
+    public void OnTearDown() throws java.lang.Exception {
+    }
+
 }

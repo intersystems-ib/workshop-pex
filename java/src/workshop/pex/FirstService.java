@@ -48,5 +48,10 @@ public class FirstService extends BusinessService {
         return null;
     }
 
+    /**
+     * OnTearDown: actions you want to do when stopping the Business Operation
+     */
+    public void OnTearDown() throws java.lang.Exception {
+    }
 
 }
