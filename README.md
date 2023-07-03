@@ -17,7 +17,7 @@ Build the image we will use during the workshop:
 ```console
 $ git clone https://github.com/intersystems-ib/workshop-pex
 $ cd workshop-pex
-$ docker-compose build
+$ docker compose build
 ```
 
 # Examples
@@ -25,14 +25,11 @@ $ docker-compose build
 ## (a). FirstDemo interoperability Production
 * Run the containers we will use in the workshop:
 ```
-docker-compose up
+docker compose up
 ```
 * Then copy some libraries you will need from the *iris* container. In a VS Code Terminal type:
 ```console
-docker cp iris:/usr/irissys/dev/java/lib/JDK18/intersystems-gateway-3.1.0.jar java/lib
-docker cp iris:/usr/irissys/dev/java/lib/JDK18/intersystems-jdbc-3.1.0.jar java/lib
-docker cp iris:/usr/irissys/dev/java/lib/JDK18/intersystems-utils-3.1.0.jar java/lib
-docker cp iris:/usr/irissys/dev/java/lib/gson/gson-2.8.5.jar java/lib
+docker cp iris:/usr/irissys/dev/java/lib/1.8/intersystems-utils-4.1.0.jar java/lib
 ```
 * Open the [Management Portal](http://localhost:52773/csp/sys/UtilHome.csp).
 * Login using the default `superuser`/ `SYS` account.
