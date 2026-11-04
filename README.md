@@ -23,13 +23,9 @@ $ docker compose build
 # Examples
 
 ## (a). FirstDemo interoperability Production
-* Run the containers we will use in the workshop:
+* Run the container we will use in the workshop:
 ```
 docker compose up
-```
-* Then copy some libraries you will need from the *iris* container. In a VS Code Terminal type:
-```console
-docker cp iris:/usr/irissys/dev/java/lib/1.8/intersystems-utils-4.1.0.jar java/lib
 ```
 * Open the [Management Portal](http://localhost:52773/csp/sys/UtilHome.csp).
 * Login using the default `superuser`/ `SYS` account.
@@ -48,13 +44,14 @@ docker cp iris:/usr/irissys/dev/java/lib/1.8/intersystems-utils-4.1.0.jar java/l
 ## (c). Understanding FirstOperation and Java Gateway
 * In VS Code, open [java/src/workshop/pex/FirstOperation.java](java/src/workshop/pex/FirstOperation.java). This is the actual `FirstOperation` implementation.
 * Have a look at the methods and properties. Can you find where is handling the incoming `FirstMessage` request?
-* Go through [java/Dockerfile](java/Dockerfile). This Dockerfile is responsible for:
-  1) Compiling Java source code & building JAR files.
-  2) Creating a Java Gateway Server containing our JAR files.
-* Notice that Java Gateway Server will run on a separate container (this is based on https://github.com/intersystems-community/JavaGatewayImage project).
-* Inspect [docker-compose.yml](docker-compose.yml) and notice the two containers we are using. What is the hostname for the Java Gateway Server we are using?
+* Go through [iris/Dockerfile](iris/Dockerfile). This Dockerfile is responsible for:
+  1) Compiling Java source code & building JAR files (`FirstDemo.jar`).
+  2) Registering an External Language Server `PEXJavaServer` in IRIS, which starts and manages the Java Gateway process
+  3) Loading the ObjectScript classes and setting the production to auto-start.
+* Notice that a dedicated `jgw` is no longer needed: the Java Gateway is handled by IRIS through an External Language Server (ELS). The IRIS image already includes a JDK 11 and the InterSystems Java libraries (`/usr/irissys/dev/java/lib/1.8/`, e.g. `intersystems-utils-4.2.2.jar`, which contains the PEX classes), so no builder stage or local jars are needed.
+* Inspect [docker-compose.yml](docker-compose.yml) and notice the only container we are using. In this scenario the gateway hostname is the same as IRIS's hostname.
 
-<img src="img/worshop-pex-diagram.png" width="600px">
+<img src="img/workshop-pex-diagram.svg" width="600px">
 
 ## (d). Adding a Business Service and Business Process
 * In VS Code, open [java/src/workshop/pex/FirstService.java](java/src/workshop/pex/FirstService.java) and [java/src/workshop/pex/FirstProcess.java](java/src/workshop/pex/FirstProcess.java).

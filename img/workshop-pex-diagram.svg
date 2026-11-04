@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="400" viewBox="0 0 1040 400" font-family="Verdana, Arial, sans-serif" font-weight="bold">
+  <defs>
+    <marker id="arrow-end" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FFBF00"/>
+    </marker>
+    <marker id="arrow-start" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FFBF00"/>
+    </marker>
+  </defs>
+
+  <rect width="1040" height="400" fill="#FFFFFF"/>
+
+  <!-- iris container -->
+  <rect x="8" y="8" width="1024" height="384" fill="#FFFFFF" stroke="#00B2A9" stroke-width="6"/>
+  <text x="520" y="58" text-anchor="middle" font-size="40" fill="#00B2A9">iris</text>
+
+  <!-- Namespace + Production -->
+  <rect x="50" y="90" width="310" height="270" fill="#00ADA7"/>
+  <text x="205" y="138" text-anchor="middle" font-size="30" fill="#FFFFFF">Namespace</text>
+  <rect x="78" y="170" width="254" height="160" fill="#00D3CC"/>
+  <text x="205" y="258" text-anchor="middle" font-size="24" fill="#FFFFFF">Production</text>
+
+  <!-- External Language Server -->
+  <rect x="600" y="90" width="400" height="270" fill="#FFFFFF" stroke="#2E2A8C" stroke-width="5"/>
+  <text x="800" y="135" text-anchor="middle" font-size="30" fill="#2E2A8C">PEXJavaServer</text>
+  <text x="800" y="163" text-anchor="middle" font-size="16" font-weight="normal" fill="#2E2A8C">External Language Server (port 44445)</text>
+  <text x="800" y="186" text-anchor="middle" font-size="16" font-style="italic" fill="#2E2A8C">Instance level (%SYS)</text>
+  <text x="625" y="228" font-size="22" fill="#2E2A8C">&gt; JVM (JDK 11)</text>
+  <text x="625" y="265" font-size="22" fill="#2E2A8C">&gt; Java Gateway</text>
+  <text x="625" y="302" font-size="22" fill="#2E2A8C">&gt; FirstDemo.jar</text>
+  <text x="650" y="328" font-size="16" font-weight="normal" fill="#2E2A8C">(PEX components)</text>
+
+  <!-- Production <-> ELS -->
+  <path d="M345,255 C470,255 460,190 585,190" fill="none" stroke="#FFBF00" stroke-width="8" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+</svg>
